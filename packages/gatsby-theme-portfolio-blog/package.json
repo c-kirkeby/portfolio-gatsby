@@ -1,0 +1,33 @@
+{
+  "name": "gatsby-theme-portfolio-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "peerDependencies": {
+    "gatsby": "^2.18.12",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@mdx-js/react": "^1.5.2",
+    "@theme-ui/color": "^0.2.53",
+    "@theme-ui/components": "^0.2.50",
+    "@theme-ui/presets": "^0.2.44",
+    "@theme-ui/prism": "^0.2.50",
+    "gatsby-plugin-theme-ui": "^0.2.43",
+    "gatsby-plugin-tinacms": "^0.1.17",
+    "gatsby-theme-ui-blog": "^0.2.52",
+    "lodash.merge": "^4.6.2",
+    "react-headroom": "^3.0.0",
+    "theme-ui": "^0.2.52",
+    "typeface-inter": "^3.10.0",
+    "typeface-metropolis": "^0.0.74"
+  }
+}
