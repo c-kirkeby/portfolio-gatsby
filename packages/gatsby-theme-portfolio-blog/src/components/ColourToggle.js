@@ -20,7 +20,7 @@ const renderIcon = (mode) => {
       return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 4C10.9494 4 9.90914 4.20693 8.93853 4.60896C7.96793 5.011 7.08601 5.60028 6.34315 6.34315C5.60028 7.08601 5.011 7.96793 4.60896 8.93853C4.20693 9.90914 4 10.9494 4 12C4 13.0506 4.20693 14.0909 4.60896 15.0615C5.011 16.0321 5.60028 16.914 6.34315 17.6569C7.08601 18.3997 7.96793 18.989 8.93853 19.391C9.90914 19.7931 10.9494 20 12 20L12 12L12 4Z" fill="currentcolor" />
-          <circle cx={12} cy={12} r={11} stroke="currentcolor" stroke-width={2} />
+          <circle cx={12} cy={12} r={11} stroke="currentcolor" strokeWidth={2} />
         </svg>
       )
     default:
@@ -76,7 +76,6 @@ export default props => {
       alt="Change colour mode"
       sx={{
         cursor: 'pointer',
-        // transition: 'all 0.1s ease 0s'
         ':hover': {
           color: 'primary'
         }

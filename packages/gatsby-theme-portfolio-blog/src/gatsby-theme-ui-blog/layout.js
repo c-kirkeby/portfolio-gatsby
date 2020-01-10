@@ -1,39 +1,72 @@
 /** @jsx jsx */
 
-import { jsx } from 'theme-ui'
-import { Flex } from '@theme-ui/components'
+import { jsx, Styled } from 'theme-ui'
+// React is imported here to use the shorthand React.Fragment, but the compiler
+// is not recognising that it's being used.
+import React from 'react' // eslint-disable-line no-unused-vars
 import { Global } from '@emotion/core'
 import Nav from '../components/Nav'
 import Main from '../components/Main'
+import Footer from '../components/footer'
 
 export default ({ children, ...props }) =>
-  <Flex
-    sx={{
-      flexDirection: 'column',
-      minHeight: '100vh'
-    }}
-    {...props}
-  >
-    <Global
-      styles={_theme => ({
-        html: {
-          overflowY: 'scroll'
-        },
-        body: {
-          margin: '0'
-        }
-      })}
-    />
-    <Nav />
-    <Main
+  <>
+    <Styled.root
       sx={{
-        display: 'flex',
-        flex: '1 1 0%',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        minHeight: '100vh',
+        display: 'flex'
       }}
     >
-      {children}
-    </Main>
-  </Flex>
+      <Global
+        styles={theme => ({
+          ':root': {
+            '@media screen and (prefers-reduced-motion)': {
+              transitionDuration: '0.001s',
+              animationDuration: '0.001s'
+            }
+          },
+          html: {
+            overflowY: 'scroll',
+            fontSize: '16px',
+            letterSpacing: '-0.011em'
+          },
+          body: {
+            margin: 0,
+            transition: theme.transitions.colormode
+          },
+          '.headroom--pinned': {
+            boxShadow: 'rgba(39,44,49,0.06) 8px 14px 38px,rgba(39,44,49,0.03) 1px 3px 8px',
+            header: {
+              div: {
+                height: '40px',
+                transition: 'height 0.2s ease-in-out, box-shadow 0.2s ease-in-out'
+              }
+            }
+          },
+          '.headroom--unfixed': {
+            boxShadow: 'none',
+            header: {
+              div: {
+                height: '70px',
+                transition: 'height 0.1s ease-in-out, box-shadow 0.1s ease-in-out'
+              }
+            }
+          }
+        })}
+      />
+      <Nav />
+      <Main
+        sx={{
+          display: 'flex',
+          flex: '1 1 0%',
+          flexDirection: 'column'
+        }}
+      >
+        {children}
+      </Main>
+      <Footer />
+    </Styled.root>
+  </>
 
 

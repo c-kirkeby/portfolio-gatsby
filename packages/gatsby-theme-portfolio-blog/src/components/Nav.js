@@ -6,70 +6,84 @@ import Headroom from 'react-headroom'
 import Logo from './Logo'
 import ColourToggle from './ColourToggle'
 
-export default () =>
-  <Headroom
-    calcHeightOnResize
-  >
-    <header
-      sx={{
-        variant: 'styles.header',
-      }}>
-      <div
+export default () => {
+
+  return (
+    <Headroom
+      calcHeightOnResize
+    // disableInlineStyles
+    >
+      <header
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '0.75rem 1.5rem',
-          maxWidth: 900,
-          height: '70px',
-          margin: '0 auto'
-        }}
-      >
-        <NavLink to='/'
-          as={Link}
+          variant: 'styles.header',
+          backgroundColor: 'background',
+          transition: theme => theme.transitions.colormode
+        }}>
+        <div
           sx={{
-            fontSize: 4,
-            mr: 3,
-            textDecoration: 'none',
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0.75rem 1.5rem',
+            maxWidth: 900,
+            margin: '0 auto'
           }}
         >
-          <Logo
+          <Link to='/'
             sx={{
-              ':hover': {
-                color: 'secondary'
-              }
-            }}
-          />
-          {/* <span>Christian Kirkeby</span> */}
-        </NavLink>
-        <div sx={{ mx: 'auto' }} />
-        <Flex
-          sx={{
-            alignItems: 'center'
-          }}
-        >
-          <NavLink to='/blog'
-            as={Link}
-            sx={{
+              fontSize: 4,
               mr: 3,
-              variant: 'styles.navlink'
-            }}>
-            Blog
-          </NavLink>
-          <NavLink to='/contact'
-            as={Link}
-            sx={{
-              mr: 3,
-              variant: 'styles.links.nav'
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              variant: 'styles.links.logo'
             }}
           >
-            Contact
+            <Logo
+            // sx={{
+            //   ':hover': {
+            //     color: 'secondary'
+            //   }
+            // }}
+            />
+            {/* <span>Christian Kirkeby</span> */}
+          </Link>
+          <div sx={{ mx: 'auto' }} />
+          <Flex
+            sx={{
+              alignItems: 'center'
+            }}
+          >
+            <NavLink to='/blog'
+              as={Link}
+              sx={{
+                mr: 3,
+              }}>
+              Blog
           </NavLink>
-          <ColourToggle />
-        </Flex>
-      </div>
-    </header >
-  </Headroom>
+            <NavLink to='/portfolio'
+              as={Link}
+              sx={{
+                mr: 3,
+              }}
+            >
+              Portfolio
+          </NavLink>
+            <NavLink to='/contact'
+              as={Link}
+              sx={{
+                mr: 3,
+              }}
+            >
+              Contact
+          </NavLink>
+            {}
+            <ColourToggle />
+          </Flex>
+        </div>
+      </header >
+    </Headroom>
+  )
+}
+
 

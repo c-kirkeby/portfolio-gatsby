@@ -42,5 +42,8 @@
   },
   ".entity": {
     "cursor": "help"
+  },
+  ".function.language-bash,.function.language-shell": {
+    "color": "#9ECE58"
   }
 }

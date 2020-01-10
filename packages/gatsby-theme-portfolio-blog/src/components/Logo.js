@@ -10,10 +10,11 @@ export default props => {
 
       <circle cx={125} cy={125} r={125}
         sx={{
-          fill: 'logoColor',
+          fill: 'primary',
           ':hover': {
-            fill: darken('logoColor', .25)
-          }
+            fill: darken('primary', .25)
+          },
+          transition: theme => theme.transitions.colormode
         }}
       />
       <g>

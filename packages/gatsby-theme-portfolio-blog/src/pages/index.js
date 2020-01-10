@@ -4,21 +4,24 @@ import { jsx } from 'theme-ui'
 import { Heading, Flex, Text, Card } from '@theme-ui/components'
 import { Link, graphql } from 'gatsby'
 import Layout from '../gatsby-theme-ui-blog/layout'
+import SEO from '../gatsby-theme-ui-blog/seo'
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
+      <SEO title="Home" />
       <Flex
         sx={{
           justifyContent: 'center',
           alignItems: 'center',
           flex: '1 1 0%',
+          flexDirection: ['column', 'column', 'row']
         }}
       >
         <div
           sx={{
-            mr: '2rem'
+            margin: '0.75rem 1.5rem 0.75rem 1.5rem',
+            padding: '1.5rem 1.5rem',
           }}
         >
           <Heading as="h1">Hi I'm Christian.</Heading>
