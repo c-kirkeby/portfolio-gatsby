@@ -73,6 +73,7 @@ export default props => {
         const next = modes[(index + 1) % modes.length]
         setMode(next)
       }}
+      id="color-toggle"
       alt="Change colour mode"
       sx={{
         cursor: 'pointer',

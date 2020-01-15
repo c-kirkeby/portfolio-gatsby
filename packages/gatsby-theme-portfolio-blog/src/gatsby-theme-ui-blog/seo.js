@@ -1,4 +1,6 @@
+/** @jsx jsx */
 
+import { jsx } from 'theme-ui'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
@@ -45,8 +47,17 @@ const SEO = ({ title, description, image, pathname, article, ...props }) => {
         {seo.title && <meta name="twitter:title" content={seo.title} />}
         {seo.description && (
           <meta name="twitter:description" content={seo.description} />
-        )}x
+        )}
         {seo.image && <meta name="twitter:image" content={seo.image} />}
+        <noscript>
+          {`
+            <style>
+              #color-toggle {
+                display: none;
+              }
+            </style>
+          `}
+        </noscript>
       </Helmet>
     </>
   )
