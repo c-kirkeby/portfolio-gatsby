@@ -30,6 +30,7 @@ export default () => {
           }}
         >
           <Link to='/'
+            aria-label="Link to the Home Page"
             sx={{
               fontSize: 4,
               mr: 3,
@@ -39,14 +40,7 @@ export default () => {
               variant: 'styles.links.logo'
             }}
           >
-            <Logo
-            // sx={{
-            //   ':hover': {
-            //     color: 'secondary'
-            //   }
-            // }}
-            />
-            {/* <span>Christian Kirkeby</span> */}
+            <Logo />
           </Link>
           <div sx={{ mx: 'auto' }} />
           <Flex
@@ -58,7 +52,9 @@ export default () => {
               as={Link}
               sx={{
                 mr: 3,
-              }}>
+              }}
+              name="Link to Blog Page"
+            >
               Blog
           </NavLink>
             <NavLink to='/portfolio'
@@ -66,6 +62,7 @@ export default () => {
               sx={{
                 mr: 3,
               }}
+              name="Link to Portfolio Page"
             >
               Portfolio
           </NavLink>
@@ -74,6 +71,7 @@ export default () => {
               sx={{
                 mr: 3,
               }}
+              name="Link to Contact Page"
             >
               Contact
           </NavLink>

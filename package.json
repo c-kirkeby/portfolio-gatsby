@@ -2,10 +2,6 @@
   "private": true,
   "author": "Christian Kirkeby <c-kirkeby>",
   "name": "gatsby-blog-monorepo",
-  "workspaces": [
-    "www",
-    "gatsby-theme-portfolio-blog"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "lerna run build --scope=www",
@@ -15,5 +11,11 @@
   },
   "devDependencies": {
     "lerna": "^3.20.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "sharp": "^0.24.0"
   }
 }

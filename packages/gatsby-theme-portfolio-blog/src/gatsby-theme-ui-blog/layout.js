@@ -21,9 +21,15 @@ export default ({ children, ...props }) =>
       <Global
         styles={theme => ({
           ':root': {
-            '@media screen and (prefers-reduced-motion)': {
-              transitionDuration: '0.001s',
-              animationDuration: '0.001s'
+          },
+          // https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/
+          // Turning off animations for people with disabilities, or thoe 
+          // who simply prefer to have animations disabled.
+          '@media screen and (prefers-reduced-motion: reduce)': {
+            '*': {
+              animationDuration: '0.001ms !important',
+              animationIterationCount: '1 !important',
+              transitionDuration: '0.001ms !important'
             }
           },
           html: {

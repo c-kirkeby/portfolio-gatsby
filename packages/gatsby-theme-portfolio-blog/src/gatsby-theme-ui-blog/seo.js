@@ -20,7 +20,7 @@ const SEO = ({ title, description, image, pathname, article, ...props }) => {
     url: `${siteUrl}${pathname || "/"}`
   }
   return (
-    <>
+    <React.Fragment>
       <Helmet
         title={seo.title}
         titleTemplate={titleTemplate}
@@ -59,7 +59,7 @@ const SEO = ({ title, description, image, pathname, article, ...props }) => {
           `}
         </noscript>
       </Helmet>
-    </>
+    </React.Fragment>
   )
 }
 

@@ -25,7 +25,7 @@
     "gatsby-plugin-feed": "^2.3.25",
     "gatsby-plugin-manifest": "^2.2.34",
     "gatsby-plugin-mdx": "^1.0.64",
-    "gatsby-plugin-offline": "^3.0.31",
+    "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-theme-ui": "^0.2.43",
     "gatsby-plugin-tinacms": "^0.1.17",

@@ -68,6 +68,8 @@ export default props => {
   return (
     <IconButton
       {...props}
+      name="Colour Toggle"
+      aria-hidden="true"
       onClick={e => {
         const index = modes.indexOf(mode)
         const next = modes[(index + 1) % modes.length]

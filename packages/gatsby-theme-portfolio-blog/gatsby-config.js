@@ -34,19 +34,21 @@ module.exports = options => ({
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.title,
+        short_name: config.title,
         lang: 'en-US',
         description: config.description,
         start_url: '/',
         theme_color: config.themeColor,
+        background_color: config.backgroundColor,
         display: 'standalone',
         icons: [
           {
-            src: '/favicons/android-chrome-192x192.png',
+            src: '/android-chrome-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/favicons/android-chrome-512x512.png',
+            src: '/android-chrome-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           }
@@ -54,6 +56,6 @@ module.exports = options => ({
       }
     },
     'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-offline'
+    'gatsby-plugin-offline'
   ]
 })

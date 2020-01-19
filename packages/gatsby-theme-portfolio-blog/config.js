@@ -7,7 +7,8 @@ const meta = {
   siteUrl: 'https://christiankirkeby.com',
   description: `This will be used for SEO. Fill this in with what you 
                     want to show up in search engines.`,
-  themeColor: '#8f4efc'
+  themeColor: '#8f4efc',
+  backgroundColor: '#fefefe'
 }
 
 const social = [{

@@ -82,10 +82,7 @@ const theme = merge({}, baseTheme, {
       minHeight: '200px',
       margin: '0.75rem 1.5rem 0.75rem 1.5rem',
       padding: '1.5rem 1.5rem',
-      boxShadow: 'rgba(39,44,49,0.06) 8px 14px 38px,rgba(39,44,49,0.03) 1px 3px 8px',
-      // text: {
-
-      // }
+      boxShadow: 'rgba(39,44,49,0.06) 8px 14px 38px,rgba(39,44,49,0.03) 1px 3px 8px'
     }
   },
   links: {
@@ -106,7 +103,7 @@ const theme = merge({}, baseTheme, {
         backgroundColor: 'primary',
         visibility: 'hidden',
         transform: 'scaleX(0)',
-        transition: 'all 0.1s ease-in-out 0s'
+        transition: 'all 0.1s ease-in-out'
       },
       ':hover::before': {
         visibility: 'visible',
