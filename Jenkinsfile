@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'yarn && yarn bootstrap \\ yarn build'
+        sh 'yarn'
+        sh 'yarn bootstrap'
+        sh ' yarn build'
       }
     }
 
