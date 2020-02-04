@@ -9,9 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''npm install
-\\
-npm run build'''
+        sh 'yarn bootstrap \\ yarn build'
       }
     }
 
