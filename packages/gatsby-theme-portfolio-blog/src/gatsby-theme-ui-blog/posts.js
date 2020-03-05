@@ -42,10 +42,13 @@ export default ({ posts }) =>
               variant="cards.primary"
             >
               <Heading
+                sx={{
+                  variant: 'cards.primary.heading'
+                }}
               >{post.title}</Heading>
               <Text
                 sx={{
-                  variant: 'styles.p'
+                  variant: 'cards.primary.p'
                 }}
               >
                 {post.excerpt}

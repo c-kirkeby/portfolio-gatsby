@@ -70,7 +70,7 @@ export default props => {
       {...props}
       name="Colour Toggle"
       aria-hidden="true"
-      onClick={e => {
+      onClick={async (_event) => {
         const index = modes.indexOf(mode)
         const next = modes[(index + 1) % modes.length]
         setMode(next)

@@ -2,3 +2,6 @@ node_modules/
 public/
 .cache/
 yarn-error.log
+reduxcache*
+lerna-debug.log
+

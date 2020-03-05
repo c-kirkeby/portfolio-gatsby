@@ -39,8 +39,9 @@ const theme = merge({}, baseTheme, {
     }
   },
   colors: {
-    primary: '#8f4efc',
+    primary: '#6308FB',
     background: ' #fefefe',
+    text: '#341748',
     secondary: '#1EFFFF',
     black: '#18013D',
     muted: '#857d7d',
@@ -51,6 +52,7 @@ const theme = merge({}, baseTheme, {
         background: '#18013D',
         text: '#fff',
         muted: '#cac4ce',
+        black: '#18013D'
       }
     }
   },
@@ -80,9 +82,23 @@ const theme = merge({}, baseTheme, {
   cards: {
     primary: {
       minHeight: '200px',
+      borderRadius: '8px',
       margin: '0.75rem 1.5rem 0.75rem 1.5rem',
       padding: '1.5rem 1.5rem',
-      boxShadow: 'rgba(39,44,49,0.06) 8px 14px 38px,rgba(39,44,49,0.03) 1px 3px 8px'
+      boxShadow: '0px 4px 10px rgba(0,0,0,0.1)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      backgroundColor: '#fefefe',
+      p: {
+        color: 'black'
+      },
+      heading: {
+        color: 'black'
+      },
+      a: {
+        color: 'secondary'
+      }
     }
   },
   links: {

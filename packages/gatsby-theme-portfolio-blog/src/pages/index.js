@@ -36,19 +36,23 @@ export default ({ data }) => {
             variant: 'cards.primary'
           }}
         >
-          <Heading>
+          <Heading
+            sx={{
+              variant: 'cards.primary.heading'
+            }}
+          >
             {data.allMdxBlogPost.nodes[0].title}
           </Heading>
           <Text
             sx={{
-              variant: 'styles.p'
+              variant: 'cards.primary.p'
             }}
           >
             {data.allMdxBlogPost.nodes[0].excerpt}
           </Text>
           <Link to={data.allMdxBlogPost.nodes[0].slug}
             sx={{
-              variant: 'styles.a'
+              variant: 'cards.primary.a'
             }}
           >Read more</Link>
         </Card>
