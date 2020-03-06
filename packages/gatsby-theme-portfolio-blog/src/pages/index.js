@@ -1,12 +1,22 @@
 /** @jsx jsx */
 
-import { jsx } from 'theme-ui'
+import { jsx, useColorMode, useThemeUI } from 'theme-ui'
 import { Heading, Flex, Text, Card } from '@theme-ui/components'
 import { Link, graphql } from 'gatsby'
 import Layout from '../gatsby-theme-ui-blog/layout'
 import SEO from '../gatsby-theme-ui-blog/seo'
 
 export default ({ data }) => {
+  /**
+   * @todo remove !important tag from the link in the card. It's not clear how
+   *       to get theme-ui to add higher specificity at this time. Essentially,
+   *       since we're making the card background white we want the link to
+   *       have a higher contrast, but links in dark mode need to have contrast
+   *       with the background.
+   */
+  const [mode, _setMode] = useColorMode()
+  const { theme } = useThemeUI()
+  const linkColor = mode === 'light' ? theme.colors.primary : theme.colors.modes.dark.secondary
   return (
     <Layout>
       <SEO title="Home" />
@@ -52,12 +62,12 @@ export default ({ data }) => {
           </Text>
           <Link to={data.allMdxBlogPost.nodes[0].slug}
             sx={{
-              variant: 'cards.primary.a'
+              color: `${linkColor} !important`
             }}
           >Read more</Link>
         </Card>
       </Flex>
-    </Layout>
+    </Layout >
   )
 }
 

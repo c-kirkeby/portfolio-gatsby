@@ -97,7 +97,7 @@ const theme = merge({}, baseTheme, {
         color: 'black'
       },
       a: {
-        color: 'secondary'
+        color: 'primary'
       }
     }
   },
@@ -136,6 +136,9 @@ const theme = merge({}, baseTheme, {
     },
     heading: {
       marginRight: '1rem'
+    },
+    foreground: {
+
     }
   },
   layout: {
